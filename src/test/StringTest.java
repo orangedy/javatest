@@ -23,6 +23,10 @@ public class StringTest {
 		
 		System.out.println("*************test replace function");
 		testReplace();
+		
+		String test = "1	拐/v	2.0969100130080562";
+		String[] result = test.split("	");
+		System.out.println(result.length);
 	}
 	
 	public static void getByteLength(String str) {
