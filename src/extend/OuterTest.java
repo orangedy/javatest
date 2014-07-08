@@ -23,5 +23,6 @@ public class OuterTest {
     public static void main(String[] args){
         Outer.Inner in = new Outer.Inner();
         in.useOuter();
+        System.out.println("for test");
     }
 } 
