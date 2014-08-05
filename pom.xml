@@ -30,5 +30,25 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.26</version>
 		</dependency>
+		<dependency>
+			<groupId>com.sun.messaging</groupId>
+			<artifactId>imq</artifactId>
+			<version>4.1</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>jms</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<!-- <dependency> <groupId>javax.naming</groupId> <artifactId>jndi</artifactId> 
+			<version>1.2.1</version> </dependency> -->
+		<dependency>
+			<groupId>com.sun.jndi</groupId>
+			<artifactId>fscontext</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+
 	</dependencies>
 </project>
