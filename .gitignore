@@ -1,3 +1,5 @@
 /target
 /localhostorytest.txt
 /.settings/
+/.classpath
+/.project
