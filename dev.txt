@@ -10,3 +10,5 @@ dev change again
 dev change by remote
 dev changed by remote again
 dev changed by remote once again
+
+test merge
