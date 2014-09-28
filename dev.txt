@@ -13,3 +13,4 @@ dev changed by remote once again
 
 test merge
 test merge2
+test mergeandrebase
