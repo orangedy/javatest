@@ -56,7 +56,11 @@ public class StringTest {
         String str = "abc";
         String[] result = str.split(":");
         System.out.println(result.length);
+
+        String addTest = 123L + "123";
+        System.out.println(addTest);
     }
+
 }
 
 class Counter {
