@@ -1,0 +1,49 @@
+Performance Statistics   2014-11-04 20:31:30 - 2014-11-04 20:32:00
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod       150.5         119         199        29.7           4         602
+
+Performance Statistics   2014-11-04 20:32:00 - 2014-11-04 20:32:30
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod       135.2          99         171        21.4           6         811
+
+Performance Statistics   2014-11-04 20:38:00 - 2014-11-04 20:38:30
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod       163.0          90         236        73.0           2         326
+
+Performance Statistics   2014-11-04 20:38:30 - 2014-11-04 20:39:00
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod       110.3         102         140        11.4           8         882
+
+Performance Statistics   2014-11-04 20:45:00 - 2014-11-04 20:45:30
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod       204.2         151         357        56.8          10        2042
+
+Performance Statistics   2014-11-04 20:46:30 - 2014-11-04 20:47:00
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod       233.0         233         233         0.0           1         233
+
+Performance Statistics   2014-11-04 20:47:00 - 2014-11-04 20:47:30
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod       105.8          97         132        13.1           9         952
+
+Performance Statistics   2014-11-04 20:50:00 - 2014-11-04 20:50:30
+Tag     Avg(ms)         Min         Max     Std-Dev       Count       Total
+
+Performance Statistics   2014-11-04 20:50:30 - 2014-11-04 20:51:00
+Tag     Avg(ms)         Min         Max     Std-Dev       Count       Total
+
+Performance Statistics   2014-11-04 20:51:00 - 2014-11-04 20:51:30
+Tag     Avg(ms)         Min         Max     Std-Dev       Count       Total
+
+Performance Statistics   2014-11-04 20:51:30 - 2014-11-04 20:52:00
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod    129023.0      129023      129023         0.0           1      129023
+
+Performance Statistics   2014-11-04 20:52:00 - 2014-11-04 20:52:30
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod       123.7          75         206        58.5           3         371
+
+Performance Statistics   2014-11-04 20:52:30 - 2014-11-04 20:53:00
+Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
+HttpClient3Test.testGetMethod        87.0          70         118        16.3           6         522
+
