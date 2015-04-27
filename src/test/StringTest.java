@@ -2,6 +2,8 @@ package test;
 
 import java.io.UnsupportedEncodingException;
 
+import org.junit.Test;
+
 public class StringTest {
 
     private static final String MESSAGE = "taobao";
@@ -28,7 +30,6 @@ public class StringTest {
         String[] result = test.split("	");
         System.out.println(result.length);
 
-        testSplit();
     }
 
     public static void getByteLength(String str) {
@@ -38,10 +39,24 @@ public class StringTest {
                 b = (str.charAt(i) + "").getBytes("GBK");
                 System.out.println(b.length);
             } catch (UnsupportedEncodingException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
+    }
+
+    @Test
+    public void testReplaceAll() {
+        String originStr = "abc211";
+        String newsStr = originStr.replaceAll(".", "*");
+        System.out.println(newsStr);
+    }
+
+    @Test
+    public void testStringLength() {
+        String str1 = "";
+        System.out.println(str1.length());
+        System.out.println(str1 == "");
+        System.out.println(str1.equals(""));
     }
 
     public static void testReplace() {
@@ -52,13 +67,34 @@ public class StringTest {
         System.out.println(testStr);
     }
 
-    public static void testSplit() {
+    @Test
+    public void testSplit() {
         String str = "abc";
-        String[] result = str.split(":");
+        String[] result = str.split("a");
         System.out.println(result.length);
 
         String addTest = 123L + "123";
         System.out.println(addTest);
+    }
+
+    @Test
+    public void testStringAdd() {
+        String str1 = null;
+        String str2 = "a";
+        System.out.println(str1 + str2);
+    }
+
+    @Test
+    public void testEquals() {
+        String a = "a";
+        String b = null;
+        System.out.println(a.equals(b));
+    }
+
+    @Test
+    public void testNewString() throws UnsupportedEncodingException {
+        String str = new String(new byte[0], "utf8");
+        System.out.println("result:" + str);
     }
 
 }

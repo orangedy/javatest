@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import org.junit.Test;
+
 /**
  * @author orangedy
  * 集合遍历测试，当遍历过程中需要更改集合结构是，必须使用遍历器的remove方法，而不能直接用集合的remove方法,需先调用next()方法
@@ -68,6 +70,7 @@ public class MapTest {
     /**
      * 测试重复添加key的问题，判定key的hashcode相同且key=或equal为TRUE时，key相同value替换
      */
+    @Test
     public void testMapInteger() {
         Map<Integer, String> map = new HashMap<Integer, String>();
         Integer key1 = 1;
@@ -75,5 +78,20 @@ public class MapTest {
         map.put(key1, "first");
         map.put(key2, "second");
         System.out.println(map.get(1));
+    }
+
+    /**
+     * 对map进行put操作能改变map的值，对map中value进行set操作能改变值
+     */
+    @Test
+    public void testMapValueChange() {
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("key", "value");
+        String value = map.get("key");
+        value = "value2";
+        System.out.println("赋值操作:" + map.get("key"));
+        map.put("key", value);
+        System.out.println("put操作:" + map.get("key"));
+
     }
 }

@@ -1,5 +1,6 @@
 package extend;
 
+
 public class Son extends Father {
 
     public Son() {
@@ -10,4 +11,7 @@ public class Son extends Father {
 //        super(prop);
 //    }
 
+    public static void main(String[] args) {
+        Outer.Inner in = new Outer.Inner();
+    }
 }

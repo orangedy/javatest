@@ -8,21 +8,23 @@ package extend;
  * @author Administrator
  *
  */
-class Outer{
-	static int i = 10;
-	int j = 11;
-    static class Inner{
-    	public void useOuter(){
-    		System.out.println(i);
-    		//System.out.println(j);  语法报错
-    	}
+class Outer {
+    // 类只有public和默认两种修饰符，Java文件名同public类名，默认修饰符类只能在同一包下被访问
+    static int i = 10;
+    int j = 11;
+
+    static class Inner {
+        public void useOuter() {
+            System.out.println(i);
+            // System.out.println(j); 语法报错
+        }
     }
 }
 
 public class OuterTest {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Outer.Inner in = new Outer.Inner();
         in.useOuter();
         System.out.println("for test");
     }
-} 
+}

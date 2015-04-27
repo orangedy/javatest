@@ -48,7 +48,7 @@ public class FrequencyTest {
         Thread.sleep(10000);
     }
 
-    class FrequenceTestClass implements Runnable {
+    static class FrequenceTestClass implements Runnable {
         final long limitTime;
         final int limitCount;
 
