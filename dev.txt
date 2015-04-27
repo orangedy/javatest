@@ -1,0 +1,17 @@
+dev changes
+dev changes 2
+dev chagne2 3
+dev changes 4
+dev change 1
+dev change 2
+dev change 3
+create ramote breach
+dev change again
+dev change by remote
+dev changed by remote again
+dev changed by remote once again
+
+test merge
+test merge2
+test mergeandrebase
+dev commit1

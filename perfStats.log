@@ -47,6 +47,7 @@ Performance Statistics   2014-11-04 20:52:30 - 2014-11-04 20:53:00
 Tag                               Avg(ms)         Min         Max     Std-Dev       Count       Total
 HttpClient3Test.testGetMethod        87.0          70         118        16.3           6         522
 
+<<<<<<< HEAD
 Performance Statistics   2014-11-20 15:54:00 - 2014-11-20 15:54:30
 Tag     Avg(ms)         Min         Max     Std-Dev       Count       Total
 
@@ -14703,3 +14704,5 @@ Tag     Avg(ms)         Min         Max     Std-Dev       Count       Total
 Performance Statistics   2015-04-13 13:06:30 - 2015-04-13 13:07:00
 Tag     Avg(ms)         Min         Max     Std-Dev       Count       Total
 
+=======
+>>>>>>> branch 'dev' of https://github.com/orangedy/javatest.git
