@@ -1,0 +1,31 @@
+/*
+ * @(#) NumberTest.java 2015年5月15日
+ * 
+ * Copyright 2010 NetEase.com, Inc. All rights reserved.
+ */
+package test;
+
+import java.text.DecimalFormat;
+
+import org.junit.Test;
+
+/**
+ *
+ * @author hzdingyong
+ * @version 2015年5月15日
+ */
+public class NumberTest {
+
+    @Test
+    public void testNumFormat() {
+        System.out.println(new DecimalFormat("00.00%").format((double) 10 / 11));
+        DecimalFormat df = new DecimalFormat();
+        df.setGroupingSize(4);
+        System.out.println(df.format(150000005566L));
+    }
+
+    @Test
+    public void testMath() {
+        System.out.println(-20 / 10);
+    }
+}

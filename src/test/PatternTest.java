@@ -41,4 +41,11 @@ public class PatternTest {
         System.out.println(str3);
         System.out.println(str4);
     }
+
+    @Test
+    public void testProductMatch() {
+        String path = "/netease-antispam/test/config/10000/1";
+        String PATH_PATTERN = "/netease-antispam/test/config/([^/]+)/([^/]+)$";
+        System.out.println(path.matches(PATH_PATTERN));
+    }
 }
