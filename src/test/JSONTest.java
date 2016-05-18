@@ -9,9 +9,6 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSON;
@@ -19,6 +16,10 @@ import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.parser.Feature;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
 /**
  *
@@ -47,11 +48,20 @@ public class JSONTest {
     @Test
     public void testJavaToJson() {
         JSONObject json = new JSONObject();
-        json.put("a", "string");
+        json.put("a", "\"string\"");
         json.put("b", "\"{\"key\":\"value\"}\"");
         String jsonStr = json.toString();
+        System.out.println(jsonStr);
         JSONObject json2 = JSONObject.fromObject(jsonStr);
         System.out.println(json2.get("b"));
+    }
+
+    @Test
+    public void testMapToJson() {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("string", "{\"test\", \"value\"}");
+        String jsonStr = JSONObject.fromObject(map).toString();
+        System.out.println(jsonStr);
     }
 
     @Test
@@ -95,5 +105,30 @@ public class JSONTest {
         System.out.println(map);
         /*System.out.println(map.get("key2"));
         System.out.println(map.get("key1"));*/
+    }
+
+    /**
+     * 注意这里的差异，gson在创建JsonObject时，会根据类型自动进行转换，比如put的value是string类型，则在外层包裹双引号
+     * 而net.sf.json由于里层是Map，不保存类型信息，所有是根据value的值进行推断json类型，应该是string类型会做特殊处理
+     * 比如如果是一串字符串，以{}包裹，并符合json object结构，那就推断为是object，而不会是string
+     */
+    @Test
+    public void testGson() {
+        JsonObject jsonObject = new JsonObject();
+        String value = "{\"a\"..\"b\"}";
+        jsonObject.addProperty("string", value);
+        System.out.println(jsonObject.toString());
+        JSONObject jsonObject2 = new JSONObject();
+        jsonObject2.element("string", value);
+        System.out.println(jsonObject2.toString());
+    }
+
+    @Test
+    public void testJSONObject() {
+        String json = "{\"key\":1}";
+        JSONObject jsonObject = JSONObject.fromObject(json);
+        jsonObject.put("key1", "2");
+        System.out.println(jsonObject.toString());
+        System.out.println(jsonObject.getInt("key"));
     }
 }

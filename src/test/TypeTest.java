@@ -2,6 +2,8 @@ package test;
 
 import java.util.List;
 
+import org.junit.Test;
+
 public class TypeTest {
 
     public static void main(String[] args) {
@@ -42,5 +44,11 @@ public class TypeTest {
         System.out.println("c===>" + c); // 1.75
         System.out.println("c===>" + Math.ceil(c)); // 2.0
         System.out.println(Math.floor(c)); // 1.0
+    }
+
+    @Test
+    public void testTime() {
+        long current = System.currentTimeMillis();
+        System.out.println(current - current % 86400000);
     }
 }
