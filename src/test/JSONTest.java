@@ -17,6 +17,7 @@ import com.alibaba.fastjson.parser.Feature;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -114,13 +115,17 @@ public class JSONTest {
      */
     @Test
     public void testGson() {
+        String jsonStr = "";
+        JsonObject jObject = new JsonParser().parse(jsonStr).getAsJsonObject();
+        System.out.println(jObject.toString());
         JsonObject jsonObject = new JsonObject();
-        String value = "{\"a\"..\"b\"}";
+        String value = "\"{\"a\":\"b\"}\"";
         jsonObject.addProperty("string", value);
         System.out.println(jsonObject.toString());
         JSONObject jsonObject2 = new JSONObject();
         jsonObject2.element("string", value);
         System.out.println(jsonObject2.toString());
+        System.out.println(jsonObject2.getString("string"));
     }
 
     @Test

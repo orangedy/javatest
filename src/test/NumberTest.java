@@ -27,5 +27,12 @@ public class NumberTest {
     @Test
     public void testMath() {
         System.out.println(-20 / 10);
+        System.out.println((1 << 24) - 1);
+    }
+
+    @Test
+    public void testPlus() {
+        int i = 0;
+        System.out.println(i++);
     }
 }

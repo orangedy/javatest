@@ -92,4 +92,14 @@ public class RegexTest {
             System.out.println(matcher.group(2));
         }
     }
+
+    @Test
+    public void testRegex() {
+        Pattern pattern = Pattern.compile("(徽|澂|幑|嬍|徵|徾|㣲).{0,2}(xin|訁|言|亻).{0,2}([0-9A-Za-z]{5,})");
+        String testStr = "㣲亻訁 ：ace9020";
+        Matcher matcher = pattern.matcher(testStr);
+        while (matcher.find()) {
+            System.out.println(matcher.group(0));
+        }
+    }
 }
