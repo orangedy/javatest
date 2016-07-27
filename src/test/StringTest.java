@@ -97,6 +97,27 @@ public class StringTest {
         System.out.println("result:" + str);
     }
 
+    @Test
+    public void testEmoji() {
+        String str = "😃";
+        String str2 = "😄";
+        try {
+            byte[] bytes = str.getBytes("UTF-8");
+            byte[] bytes2 = str2.getBytes("UTF-8");
+            printArray(bytes);
+            printArray(bytes2);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void printArray(byte[] array) {
+        for (byte o : array) {
+            System.out.println((o & 0xF0) >> 4);
+            System.out.println(o & 0x0F);
+        }
+
+    }
 }
 
 class Counter {

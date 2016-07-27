@@ -1,12 +1,15 @@
 package test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import org.junit.Test;
+
+import com.google.common.collect.Lists;
 
 public class ListTest implements I1 {
     private List<String> testList = new ArrayList<String>();
@@ -65,6 +68,13 @@ public class ListTest implements I1 {
         for (String e : testList) {
             System.out.println(e);
         }
+    }
+
+    @Test
+    public void testSort() {
+        List<Integer> list = Lists.newArrayList(3, 1, 2);
+        Collections.sort(list);
+        System.out.println(list);
     }
 }
 

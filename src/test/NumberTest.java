@@ -31,8 +31,17 @@ public class NumberTest {
     }
 
     @Test
+
     public void testPlus() {
         int i = 0;
+
         System.out.println(i++);
+    }
+
+    @Test
+    public void testDouble() {
+        int i = -1;
+        double ret = i / 100.0d;
+        System.out.println(ret);
     }
 }
